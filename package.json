@@ -1,0 +1,50 @@
+{
+    "name": "bulma-v1-tooltip",
+    "description": "Exibe facilmente uma dica de ferramenta anexada (tooltip) a qualquer tipo de elemento, em diferentes posições",
+    "version": "1.0.0",
+    "homepage": "https://github.com/theovniboss/bulma-v1-tooltip",
+    "author": {
+        "name": "Leonardo Testa",
+        "email": "ltesta@gmail.com",
+        "url": "https://github.com/theovniboss/"
+    },
+    "main": "./src/sass/index.scss",
+    "style": "./dist/bulma-v1-tooltip.css",
+    "sass": "./src/sass/index.scss",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/theovniboss/bulma-v1-tooltip.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/theovniboss/bulma-v1-tooltip/issues"
+    },
+    "keywords": [
+        "tooltip",
+        "ui",
+        "component",
+        "extension",
+        "html",
+        "html5",
+        "css3",
+        "sass",
+        "bulma",
+        "bulmaio",
+        "bulma.io"
+    ],
+    "devDependencies": {
+        "bulma": "^1.0.3",
+        "sass": "^1.83.1"
+    },
+    "scripts": {
+		"compressed": "sass src/sass/index.scss:dist/bulma-v1-tooltip.min.css --no-source-map --style=compressed --load-path=node_modules/ ",
+        "expanded": "sass src/sass/index.scss:dist/bulma-v1-tooltip.css --no-source-map --style=expanded --load-path=node_modules/",
+        "build": "npm run compressed && npm run expanded"
+	},
+    "files": [
+		"dist",
+		"src",
+		"LICENSE",
+		"README.md"
+	]
+}

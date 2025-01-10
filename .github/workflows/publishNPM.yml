@@ -21,10 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Wait for a while
-        run: sleep 60  # Aguarda 60 segundos antes de tentar publicar
+      - name: Build project
+        run: npm run build
 
       - name: Publish to NPM
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
+        

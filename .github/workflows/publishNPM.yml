@@ -8,25 +8,26 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write # allow GITHUB_TOKEN to publish packages
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'  # ou a versão do Node.js que você está usando
-          registry-url: 'https://registry.npmjs.org'
+          node-version: '20'  # ou a versão do Node.js que você está usando
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
       - name: Publish to NPM
-        run: npm publish
+      - uses: JS-DevTools/npm-publish@v3
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          registry: "https://npm.pkg.github.com"
         

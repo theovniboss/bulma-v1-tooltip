@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18  # Use a versão mais recente do Node.js
-          registry: "https://npm.pkg.github.com/"
 
       - name: Configure NPM authentication
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc

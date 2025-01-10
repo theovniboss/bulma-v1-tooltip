@@ -4,21 +4,7 @@
 
 layout: default
 ---
-<style>
-    .table tr>th:first-child, .table tr>td:first-child {
-    position: sticky;
-    left: 0;
-    z-index:99;
-    white-space: nowrap;
-    }
-    .table tr th {
-    background: white;
-    }
 
-    .table tr td {
-    background: white;
-    }
-</style>
 
 # Instalação
 

@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'  # ou a versão do Node.js que você está usando
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm install

@@ -18,6 +18,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'  # ou a versão do Node.js que você está usando
+          registry: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: npm install
@@ -29,5 +30,5 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          registry: "https://registry.npmjs.org"
+
         

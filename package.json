@@ -32,6 +32,7 @@
         "bulmaio",
         "bulma.io"
     ],
+    
     "devDependencies": {
         "bulma": "^1.0.3",
         "sass": "^1.83.1"

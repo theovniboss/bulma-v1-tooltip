@@ -7,7 +7,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge) -->
 
-> Bulma Tooltip é uma extensão para [Bulma](https://bulma.io) em CSS puro que traz a capacidade de exibir facilmente umtooltipa qualquer tipo de elemento HTML em diferentes posições .
+> Bulma Tooltip é uma extensão para [Bulma](https://bulma.io) em CSS puro que traz a capacidade de exibir facilmente um tooltip a qualquer tipo de elemento HTML em diferentes posições .
 
 
 ## 💻 Pré-requisitos
@@ -19,12 +19,12 @@
 
 Para instalar o Bulma tooltip, siga estas etapas: 
 
-### Npm
+#### NPM
 ```
 npm i bulma-v1-tooltip
 ```
 
-### Cdn
+#### CDN
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-v1-tooltip/dist/bulma-v1-tooltip.min.css">
 ```

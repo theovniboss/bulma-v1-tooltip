@@ -6,31 +6,36 @@ on:
       - 'v*.*.*'  # Executa o workflow para tags que seguem o padrão de versão semântica
 
 jobs:
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 18
+        - run: npm ci
+        - run: npm test
+      
   publish:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write # allow GITHUB_TOKEN to publish packages
+    needs: build
+    runs-on: ubuntu-latest    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
-          node-version: '18'  # Use a versão mais recente do Node.js
-          registry: "https://registry.npmjs.org"
+          node-version: 18  # Use a versão mais recente do Node.js
+          registry: "https://npm.pkg.github.com/"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
-
       - name: Publish to NPM
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
+        
         
 
         

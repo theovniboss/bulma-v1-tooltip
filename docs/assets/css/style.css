@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 @import "/assets/css/bulma-no-dark-mode-no-reset.css";
-@import "https://cdn.jsdelivr.net/npm/bulma-v1-tooltip@1.0.0/dist/bulma-v1-tooltip.min.css";
+@import "https://cdn.jsdelivr.net/npm/bulma-v1-tooltip/dist/bulma-v1-tooltip.min.css";
 
 .table tr>th:first-child, .table tr>td:first-child {
     position: sticky;

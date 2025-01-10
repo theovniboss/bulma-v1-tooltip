@@ -12,12 +12,13 @@ jobs:
       contents: read
       packages: write # allow GITHUB_TOKEN to publish packages
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: '20'  # ou a versão do Node.js que você está usando
+          node-version: '18'  # Use a versão mais recente do Node.js
           registry: "https://registry.npmjs.org"
 
       - name: Install dependencies
@@ -27,8 +28,9 @@ jobs:
         run: npm run build
 
       - name: Publish to NPM
-        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
+        
 
         

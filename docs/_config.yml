@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Bulma Tooltip é uma extensão para Bulma.io em CSS puro que traz a capacidade de exibir 
   facilmente um tooltip a qualquer tipo de elemento, em diferentes posições .
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://theovniboss.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: theovniboss
 github_username:  theovniboss
 show_downloads: false

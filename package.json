@@ -1,7 +1,7 @@
 {
     "name": "bulma-v1-tooltip",
     "description": "Exibe facilmente uma dica de ferramenta anexada (tooltip) a qualquer tipo de elemento, em diferentes posições",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "homepage": "https://github.com/theovniboss/bulma-v1-tooltip",
     "author": {
         "name": "Leonardo Testa",
